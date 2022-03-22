@@ -1,0 +1,38 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import javax.swing.JFrame;
+public class main extends JFrame
+{
+	
+	private static final int WIDTH = 800;
+	private static final int HEIGHT = 600;
+	
+//   public static void main(String[] args) {
+//      JFrame frame = new JFrame();
+//      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//      frame.setPreferredSize(new Dimension(800, 600));
+//      frame.getContentPane().setBackground(Color.BLUE);
+//      frame.pack();
+//      frame.setVisible(true);
+	public main()
+	{
+		getContentPane().add(new board());
+		
+		setSize(WIDTH,HEIGHT);
+		setVisible(true);
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		      JFrame frame = new JFrame();
+		      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		      frame.setPreferredSize(new Dimension(800, 600));
+		      frame.getContentPane().setBackground(Color.BLUE);
+		      frame.pack();
+		      frame.setVisible(true);
+	}
+
+
+	public static void main( String args[] )
+	{
+		main run = new main();
+	}
+}
