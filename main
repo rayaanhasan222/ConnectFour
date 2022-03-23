@@ -16,7 +16,7 @@ public class main extends JFrame
 //      frame.setVisible(true);
 	public main()
 	{
-		getContentPane().add(new board());
+		//getContentPane().add(new board());
 		
 		setSize(WIDTH,HEIGHT);
 		setVisible(true);
