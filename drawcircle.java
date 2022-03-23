@@ -12,8 +12,8 @@ public class drawcircle extends Canvas
 		window.setColor(Color.WHITE);
 		int x1 = 10;
 		int y1=10;
-		for(int x = 10; x<=810;x+=100) {
-			for(int y = 10; y<=810;y+=100) {
+		for(int x = 10; x<810;x+=100) {
+			for(int y = 10; y<810;y+=100) {
 				window.drawOval(x,y,90,90);
 			}
 		}
