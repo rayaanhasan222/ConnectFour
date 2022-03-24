@@ -1,0 +1,59 @@
+package connectFourGame;
+
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+public class chips extends Canvas implements MouseListener
+{
+	private int x;
+	private int y;
+	
+	
+	public chips ()
+	{
+		addMouseListener(this);
+	}
+	
+	public void drawCircle(int x, int y)
+	{
+		Graphics g = this.getGraphics();
+		g.drawOval(x, y, x, y);
+		g.setColor(Color.YELLOW);
+		g.fillOval(x,y,x,y);
+	}
+	public void mouseClicked(MouseEvent e) 
+	{
+		x = e.getX();
+		y = e.getY();
+//		System.out.println(x + " " + y);
+//		System.out.println("i = " + (y/90) + " j = " + (x/90));
+		
+		repaint();
+		
+		
+	}
+	
+	public void paint(Graphics g)
+	{
+		drawCircle(x,y);
+	}
+	
+	public void mousePressed(MouseEvent e){}
+	public void mouseReleased(MouseEvent e){}
+	public void mouseEntered(MouseEvent e){}
+	public void mouseExited(MouseEvent e) {}
+	
+	
+    public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+              public void run() {
+                   chips frame = new chips();
+                   frame.setVisible(true);
+              }
+        });
+    }
+
+}
