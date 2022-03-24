@@ -17,5 +17,12 @@ public class drawcircle extends Canvas
 				window.drawOval(x,y,90,90);
 			}
 		}
+		window.setColor(Color.GRAY);
+		for(int x = 10; x<810;x+=100) {
+			for(int y = 10; y<810;y+=100) {
+				window.fillOval(x,y,90,90);
+			}
+		}
 	}
+	
 }
