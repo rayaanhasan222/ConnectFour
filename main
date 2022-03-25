@@ -1,7 +1,9 @@
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.Dimension;
 import javax.swing.JFrame;
-public class main extends JFrame
+import javax.swing.JPanel;
+public class main extends JFrame 
 {
 	
 	private static final int WIDTH = 800;
@@ -16,19 +18,69 @@ public class main extends JFrame
 //      frame.setVisible(true);
 	public main()
 	{
+		
+		Container c = getContentPane();
+		JFrame frameCircles = new JFrame();
+		frameCircles.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameCircles.setPreferredSize(new Dimension(800, 800));
+		frameCircles.getContentPane().setBackground(Color.BLUE);
+		frameCircles.getContentPane().add(new drawcircle() );
+		frameCircles.pack();
+		frameCircles.setVisible(true);
+		
+		
+		JFrame frameChips = new JFrame();
+		frameChips.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameChips.setPreferredSize(new Dimension(800, 800));
+		frameChips.getContentPane().setBackground(Color.BLUE);
+		frameChips.getContentPane().add(new chips() );
+		frameChips.pack();
+		frameChips.setVisible(true);
+		
+		c.add(frameCircles);
+		c.add(frameChips);
+
+//		JFrame frameChips = new JFrame();
+
+		
+		
+		
+		
+		
 		//getContentPane().add(new board());
 		
 		setSize(WIDTH,HEIGHT);
 		setVisible(true);
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		      JFrame frame = new JFrame();
-		      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		      frame.setPreferredSize(new Dimension(800, 800));
-		      frame.getContentPane().setBackground(Color.BLUE);
-		      frame.getContentPane().add(new drawcircle() );
-		      frame.pack();
-		      frame.setVisible(true);
+		
+		
+//        JPanel panel = new JPanel();
+//        panel.setBackground (Color.BLUE);
+//        panel.add (new drawcircle()); // Class with paintComponent method.
+//        panel.add (new chips()); // Class with paintComponent method.
+		
+//		      JFrame frame = new JFrame();
+//		      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		      frame.setPreferredSize(new Dimension(800, 800));
+//		      frame.getContentPane().setBackground(Color.BLUE);
+////		      frame.getContentPane().add(new drawcircle() );
+//		      frame.getContentPane().add(new chips());
+//		      
+//		      
+//		      
+//		      frame.pack();
+//		      frame.setVisible(true);
+		      
+		      
+		      
+		      
+//		      JFrame chipFrame = new JFrame();
+//		      chipFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		      chipFrame.setPreferredSize(new Dimension(800, 800));
+//		      chipFrame.getContentPane().add(new chips());
+//		      chipFrame.pack();
+//		      chipFrame.setVisible(true);
 	}
 
 
