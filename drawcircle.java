@@ -9,7 +9,7 @@ public class drawcircle extends Canvas
 	{	
 	}
 	public void paint( Graphics window ) {
-		window.setColor(Color.WHITE);
+		window.setColor(Color.GRAY);
 		int x1 = 10;
 		int y1=10;
 		for(int x = 10; x<810;x+=100) {
