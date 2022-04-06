@@ -8,7 +8,7 @@ public class drawcircle extends Canvas
 	public drawcircle()
 	{	
 	}
-	public void paint( Graphics window ) {
+	public void paint1( Graphics window ) {
 		window.setColor(Color.GRAY);
 		int x1 = 10;
 		int y1=10;
