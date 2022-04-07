@@ -16,6 +16,7 @@ import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
@@ -174,16 +175,31 @@ public class main extends JFrame
 		      
 		      
 				JFrame frame1 = new JFrame("instructions");
-				final JTextField tf = new JTextField();
-				tf.setBounds(50,50,150,20);
+				final JTextArea tf = new JTextArea();
+				tf.setBounds(50,50,1000,200);
 				JButton b = new JButton("Click Here to Read Instructions");
-				b.setBounds(50,100,295,30);
+				b.setBounds(50,300,295,30);
 				b.addActionListener(new ActionListener()
 						{
 							public void actionPerformed(ActionEvent arg0) 
 							{
+								String instruc[] = {
+										"The rules are simple!", 
+										"Try to build a row of four checkers while keeping your opponent from doing the same.",
+										"",
+										"OBJECT:", 
+										"Be the first player to get four of your colored checkers in a row-", 
+										"vertically, horizontally, or diagonally!"
+										};
+								 for (int s=0; s<instruc.length; s++)
+								 {
+									 tf.append(instruc[s]);
+									 tf.append("\n");
+								 }
+							
+								
 
-								tf.setText("CONNECT FOUR!!");
+//								tf.setText("CONNECT FOUR!!");
 							}
 					
 						});
