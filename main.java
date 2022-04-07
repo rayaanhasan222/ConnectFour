@@ -3,6 +3,8 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Shape;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Ellipse2D;
@@ -11,8 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 public class main extends JFrame
@@ -167,6 +171,28 @@ public class main extends JFrame
 		      //frame.getContentPane().add(new chips() );
 		      frame.pack();
 		      frame.setVisible(true);
+		      
+		      
+				JFrame frame1 = new JFrame("instructions");
+				final JTextField tf = new JTextField();
+				tf.setBounds(50,50,150,20);
+				JButton b = new JButton("Click Here to Read Instructions");
+				b.setBounds(50,100,295,30);
+				b.addActionListener(new ActionListener()
+						{
+							public void actionPerformed(ActionEvent arg0) 
+							{
+
+								tf.setText("CONNECT FOUR!!");
+							}
+					
+						});
+				frame1.add(b);
+				frame1.add(tf);
+				frame1.setSize(800,800);
+				frame1.setLayout(null);
+				frame1.setVisible(true);
+		      
 	}
 
 
